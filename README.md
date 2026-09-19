@@ -10,6 +10,8 @@ EcoPulse is an automated urban intelligence API and public safety pipeline desig
 
 Metropolitan areas face severe environmental and infrastructural challenges, including toxic seasonal smog, municipal waste accumulation, water contamination, and traffic noise. Citizen reports regarding these hazards are typically received as unstructured text via various public channels. Municipal bodies often lack automated pipelines to rapidly categorize these reports, evaluate threat severity, and broadcast actionable public safety guidance to affected communities.
 
+<img width="1300" height="446" alt="tech" src="https://github.com/user-attachments/assets/d8ece231-3a19-49c9-9c07-5f4e822591f2" />
+
 ### Track Alignment
 
 This project aligns directly with the **AI-Supported Assessment and Resilience Informatics** track. By leveraging machine learning models for real-time text classification and natural language generation, the system automates the processing of public reports and accelerates municipal hazard response.
@@ -26,6 +28,9 @@ Unstructured complaints submitted by citizens require manual review, causing del
 
 EcoPulse implements an asynchronous RESTful API built with FastAPI that processes raw text input from citizen submissions. The backend routes incoming text through a two-stage artificial intelligence model pipeline:
 
+
+<img width="1291" height="461" alt="metric" src="https://github.com/user-attachments/assets/3801f2a1-7659-4d62-bc31-e4f8824951ed" />
+
 1. **Zero-Shot Classification:** Categorizes the text into one of five predefined urban hazard classes and calculates a severity score based on label confidence.
 2. **Generative Advisory Pipeline:** Consumes the classification data and severity score to construct a 3-sentence public safety advisory for local residents.
 
@@ -40,6 +45,8 @@ EcoPulse implements an asynchronous RESTful API built with FastAPI that processe
 By automating the report triage process, the system reduces the time required to generate public advisories from hours to seconds. The modular architecture permits straightforward deployment across other metropolitan regions by updating localized geographical parameters and target category definitions without requiring model retraining.
 
 ---
+
+<img width="977" height="551" alt="main" src="https://github.com/user-attachments/assets/5088cc86-6ad9-4cfc-9351-576ac8810c6c" />
 
 ## 3. Technology and Innovation Component
 
@@ -76,6 +83,8 @@ The functional prototype delivers an end-to-end processing pipeline verified thr
 * **Health Check Endpoint `/health`:** Reports active service status and verifies the presence of configured API authentication tokens.
 
 ---
+
+<img width="893" height="177" alt="terminal" src="https://github.com/user-attachments/assets/024dcd51-4b7d-4ba8-bc7d-66bfcb9dc8b5" />
 
 ## 5. Tech Stack
 
