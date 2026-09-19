@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoPulse Lahore - Urban Intelligence & Climate Preparedness</title>
+    <!-- Modern Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="brand">
+                <span class="brand-pulse"></span>
+                <span class="brand-name">EcoPulse <span class="highlight">Lahore</span></span>
+            </div>
+            <nav class="nav-links">
+                <a href="#dashboard">Live Intelligence</a>
+                <a href="#analyzer">Threat Analyzer</a>
+                <a href="#features">Features</a>
+                
+                <a href="#tech-stack">Tech Stack</a>
+                <a href="#how-it-works">Working</a>
+            </nav>
+            <div class="nav-actions">
+                <span class="status-badge online"><span class="dot"></span> Lahore Mesh Active</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">Smart City Hackathon Lahore Submission</span>
+            <h1>Data-Driven Urban Intelligence & Climate Preparedness</h1>
+            <p>Transforming raw city sensor telemetry and unstructured citizen reports into predictive smog forecasting, heat island tracking, and real-time Urdu/English emergency advisories.</p>
+            <div class="hero-buttons">
+                <a href="#analyzer" class="btn btn-primary">Report Urban Threat</a>
+                <a href="#dashboard" class="btn btn-secondary">View Live Metrics</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: Live City Telemetry & Environmental Metrics -->
+    <section id="dashboard" class="dashboard-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Real-Time Lahore Environmental Metrics</h2>
+                <p>Live status feed monitoring key district air quality and municipal indicators.</p>
+            </div>
+            
+            <div class="metric-grid">
+                <div class="metric-card danger">
+                    <div class="metric-icon">🌫️</div>
+                    <div class="metric-info">
+                        <h3>Air Quality Index (AQI)</h3>
+                        <p class="metric-value" id="aqi-value">312</p>
+                        <span class="metric-status">Hazardous (Smog Alert)</span>
+                    </div>
+                </div>
+
+                <div class="metric-card warning">
+                    <div class="metric-icon">🌡️</div>
+                    <div class="metric-info">
+                        <h3>Urban Heat Island Index</h3>
+                        <p class="metric-value" id="heat-value">+3.8°C</p>
+                        <span class="metric-status">Above District Baseline</span>
+                    </div>
+                </div>
+
+                <div class="metric-card success">
+                    <div class="metric-icon">♻️</div>
+                    <div class="metric-info">
+                        <h3>Municipal Sanitation Rate</h3>
+                        <p class="metric-value" id="waste-value">78%</p>
+                        <span class="metric-status">Optimal Disposal Track</span>
+                    </div>
+                </div>
+
+                <div class="metric-card info">
+                    <div class="metric-icon">📡</div>
+                    <div class="metric-info">
+                        <h3>Active AI Sensor Nodes</h3>
+                        <p class="metric-value" id="node-value">142</p>
+                        <span class="metric-status">Connected Across 10 Zones</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: AI Environmental Incident Reporting & Analysis -->
+    <section id="analyzer" class="analyzer-section">
+        <div class="container">
+            <div class="analyzer-wrapper">
+                
+                <!-- Report Form Input -->
+                <div class="analyzer-card input-card">
+                    <div class="card-header">
+                        <h2>Report Urban Hazard / Issue</h2>
+                        <p>Submit unstructured text or sensor observations for instant Hugging Face + OpenAI AI classification.</p>
+                    </div>
+
+                    <form id="incident-form" class="incident-form">
+                        <div class="form-group">
+                            <label for="location-select">District / Zone Location</label>
+                            <select id="location-select" required>
+                                <option value="" disabled selected>Select Lahore District</option>
+                                <option value="Gulberg III, Lahore">Gulberg III</option>
+                                <option value="DHA Phase 5, Lahore">DHA Phase 5</option>
+                                <option value="Johar Town, Lahore">Johar Town</option>
+                                <option value="Walled City (Androon), Lahore">Walled City (Androon)</option>
+                                <option value="Model Town, Lahore">Model Town</option>
+                                <option value="Allama Iqbal Town, Lahore">Allama Iqbal Town</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="report-text">Hazard Description / Sensor Data</label>
+                            <textarea id="report-text" rows="5" placeholder="Example: Uncontrolled crop waste burning noticed near the outer ring road causing heavy black smoke buildup..." required></textarea>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="btn btn-primary btn-block">
+                            <span id="btn-text">Analyze & Broadcast Advisory</span>
+                            <span id="btn-spinner" class="spinner hidden"></span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Live AI Response Output -->
+                <div class="analyzer-card output-card">
+                    <div class="card-header">
+                        <h2>Real-Time AI Response & Advisory</h2>
+                        <p>Instant classification and bilingual behavioral advisory generation.</p>
+                    </div>
+
+                    <div id="output-placeholder" class="output-placeholder">
+                        <div class="placeholder-icon">🤖</div>
+                        <p>Submit a report on the left to activate Hugging Face zero-shot classification and generate bilingual OpenAI climate advisories.</p>
+                    </div>
+
+                    <div id="output-content" class="output-content hidden">
+                        <div class="output-badge-container">
+                            <span id="res-category" class="category-badge">Category Name</span>
+                            <span id="res-severity" class="severity-badge">Severity Score</span>
+                        </div>
+
+                        <div class="output-block">
+                            <h3>📍 Target Location</h3>
+                            <p id="res-location">Location details will appear here...</p>
+                        </div>
+
+                        <div class="output-block advisory-box">
+                            <h3>📢 Public Health & Preparedness Broadcast</h3>
+                            <div id="res-advisory" class="advisory-text">Bilingual broadcast content will be rendered here...</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Target Users -->
+    <section id="target-users" class="info-section alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2>Target Users & Beneficiaries</h2>
+                <p>Designed for multi-stakeholder collaboration across Lahore's ecosystem.</p>
+            </div>
+
+            <div class="card-grid">
+                <div class="info-card">
+                    <div class="card-icon">🏙️</div>
+                    <h3>City Residents & Citizens</h3>
+                    <p>Receive immediate, actionable health warnings in English and Urdu during acute smog spikes, heatwaves, or flash flooding events.</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-icon">🏛️</div>
+                    <h3>Municipal Authorities (LWMC / EPD)</h3>
+                    <p>Gain automated categorization of citizen complaints and sensor anomalies to deploy emergency waste management or smog mitigation teams efficiently.</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-icon">🚑</div>
+                    <h3>First Responders & Health Agencies</h3>
+                    <p>Utilize zone-specific threat severity indices to preemptively allocate medical resources and respiratory relief camps.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Key Platform Features -->
+    <section id="features" class="info-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Platform Features</h2>
+                <p>Addressing the Smart City Hackathon core themes through advanced engineering.</p>
+            </div>
+
+            <div class="card-grid">
+                <div class="info-card">
+                    <div class="card-icon">📊</div>
+                    <h3>City Intelligence</h3>
+                    <p>Converts raw text reports and environmental numbers into structured threat indices using Hugging Face Zero-Shot models.</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-icon">🌱</div>
+                    <h3>Clean City Automation</h3>
+                    <p>Identifies illegal dumping site hotspots, biomass burning incidents, and industrial emissions for rapid city response.</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-icon">📢</div>
+                    <h3>Bilingual Public Preparedness</h3>
+                    <p>Generates real-time, behavior-changing public health broadcasts formatted in both English and Urdu for wide public adoption.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Tech Stack Architecture -->
+    <section id="tech-stack" class="info-section alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technical Architecture & Tech Stack</h2>
+                <p>Built using modular, high-performance web standards and AI infrastructure.</p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <h4>Python / FastAPI</h4>
+                    <p>High-speed asynchronous backend handling cross-origin requests and service orchestration.</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Hugging Face API</h4>
+                    <p>Zero-shot classification pipeline for categorizing unstructured urban reports without fine-tuning overhead.</p>
+                </div>
+                <div class="tech-item">
+                    <h4>OpenAI API</h4>
+                    <p>Generative AI engine delivering succinct, localized emergency preparedness and health guidance.</p>
+                </div>
+                <div class="tech-item">
+                    <h4>HTML5 & Modern CSS3</h4>
+                    <p>Zero-dependency, low-latency responsive interface optimized for desktop and mobile accessibility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: How To Use -->
+    <section id="how-it-works" class="info-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How to Use EcoPulse</h2>
+                <p>Follow these quick steps to analyze urban hazards and distribute advisories.</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <span class="step-num">01</span>
+                    <h3>Select District</h3>
+                    <p>Choose the relevant zone in Lahore from the location drop-down list.</p>
+                </div>
+                <div class="step-card">
+                    <span class="step-num">02</span>
+                    <h3>Describe Hazard</h3>
+                    <p>Input raw observations, such as open burning, chemical odors, or uncollected waste piles.</p>
+                </div>
+                <div class="step-card">
+                    <span class="step-num">03</span>
+                    <h3>Execute AI Pipeline</h3>
+                    <p>Click 'Analyze & Broadcast Advisory' to trigger the asynchronous backend processing chain.</p>
+                </div>
+                <div class="step-card">
+                    <span class="step-num">04</span>
+                    <h3>Review & Broadcast</h3>
+                    <p>Receive instant categorizations, threat severity metrics, and bilingual safety guidance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 EcoPulse Lahore. Smart City Hackathon Lahore Project.</p>
+            <p class="subtext">Engineered for real-world civic impact, urban sustainability, and public safety.</p>
+        </div>
+    </footer>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
