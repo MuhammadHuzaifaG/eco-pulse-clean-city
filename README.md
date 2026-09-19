@@ -10,7 +10,7 @@ EcoPulse is an automated urban intelligence API and public safety pipeline desig
 
 Metropolitan areas face severe environmental and infrastructural challenges, including toxic seasonal smog, municipal waste accumulation, water contamination, and traffic noise. Citizen reports regarding these hazards are typically received as unstructured text via various public channels. Municipal bodies often lack automated pipelines to rapidly categorize these reports, evaluate threat severity, and broadcast actionable public safety guidance to affected communities.
 
-<img width="1300" height="446" alt="tech" src="https://github.com/user-attachments/assets/d8ece231-3a19-49c9-9c07-5f4e822591f2" />
+<img width="977" height="551" alt="main" src="https://github.com/user-attachments/assets/5088cc86-6ad9-4cfc-9351-576ac8810c6c" />
 
 ### Track Alignment
 
@@ -46,7 +46,7 @@ By automating the report triage process, the system reduces the time required to
 
 ---
 
-<img width="977" height="551" alt="main" src="https://github.com/user-attachments/assets/5088cc86-6ad9-4cfc-9351-576ac8810c6c" />
+<img width="1300" height="446" alt="tech" src="https://github.com/user-attachments/assets/d8ece231-3a19-49c9-9c07-5f4e822591f2" />
 
 ## 3. Technology and Innovation Component
 
